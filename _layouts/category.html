@@ -1,0 +1,16 @@
+---
+layout: content
+---
+
+<h1>分类：{{ page.category }}</h1>
+{% for post in site.categories[page.category] %}
+<article>
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p class="meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+  </p>
+  <div class="markdown-body">
+    {{ post.excerpt }}
+  </div>
+</article>
+{% endfor %}

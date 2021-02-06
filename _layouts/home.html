@@ -1,0 +1,18 @@
+---
+layout: content
+---
+
+<div class="markdown-body">
+  {{ content }}
+</div>
+{% for post in site.posts %}
+<article>
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p class="meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+  </p>
+  <div class="markdown-body">
+    {{ post.excerpt }}
+  </div>
+</article>
+{% endfor %}

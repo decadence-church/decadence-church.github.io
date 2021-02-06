@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="generator" content="Jekyll {{ jekyll.version }}">
+  <title>{% if page.title and page.title != "" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="https://pages-themes.github.io/primer/assets/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  {% if page.syntax %}
+  <link rel="stylesheet" href="/css/syntax.css" />
+  {% endif %}
+  {% if page.styles %}{% for style in page.styles %}
+  <link rel="stylesheet" href="{{ style }}" />
+  {% endfor %}{% endif %}
+  {% if page.scripts %}{% for script in page.scripts %}
+  <script src="{{ script }}"></script>
+  {% endfor %}{% endif %}
+</head>
+
+<body>
+  {{ content }}
+</body>
+
+</html>
